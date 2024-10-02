@@ -6,4 +6,7 @@ edition = "2021"
 [dependencies]
 regex = "1"
 walkdir = "2.3"
-clap = { version = "4.0", features = ["derive"] }
+clap = { version = "^4.0", features = ["derive"] }
+
+[build]
+rustflags = ["-C", "target-feature=+crt-static"]
